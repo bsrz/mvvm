@@ -3,6 +3,22 @@ import SwiftUI
 
 class AuthViewModel: ObservableObject {
 
+    // MARK: - Properties
+
+    private let responder: Responder<ResponderAction>
+
+    // MARK: - Lifecycle
+
+    init(responder: Responder<ResponderAction>) {
+        self.responder = responder
+    }
+
+    // MARK: - Responder
+
+    enum ResponderAction {
+        case success
+    }
+
     // MARK: - Input
 
     enum Action {
@@ -25,6 +41,7 @@ class AuthViewModel: ObservableObject {
             // 1. make network call
             // 2. handle errors
             // 3. tell parent
+            responder.send(.success)
         }
     }
 

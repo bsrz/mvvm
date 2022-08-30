@@ -19,10 +19,24 @@ class AppViewModel: ObservableObject {
             send(.authenticate)
 
         case .authenticate:
-            set(state: .auth(AuthViewModel()))
+            set(state: .auth(
+                AuthViewModel(responder: .init { action in
+                    switch action {
+                    case .success:
+                        self.send(.goHome)
+                    }
+                })
+            ))
 
         case .goHome:
-            set(state: .home(HomeViewModel()))
+            set(state: .home(
+                HomeViewModel(responder: .init { action in
+                    switch action {
+                    case .logout:
+                        self.send(.authenticate)
+                    }
+                })
+            ))
         }
     }
 
