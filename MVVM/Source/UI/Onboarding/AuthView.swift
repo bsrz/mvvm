@@ -33,6 +33,9 @@ struct AuthView: View {
                     Button("Log In") {
                         viewModel.send(.authenticate(username, password))
                     }
+                    Button("Back") {
+                        viewModel.send(.back)
+                    }
                 }
 
                 if let error = viewModel.error {

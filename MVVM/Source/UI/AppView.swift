@@ -10,8 +10,14 @@ struct AppView: View {
             case .idle:
                 Text("Getting Ready")
 
+            case .options(let viewModel):
+                AuthOptionsView(viewModel: viewModel)
+
             case .auth(let viewModel):
                 AuthView(viewModel: viewModel)
+
+            case .onboarding(let viewModel):
+                OnboardingView(viewModel: viewModel)
 
             case .home(let viewModel):
                 HomeView(viewModel: viewModel)

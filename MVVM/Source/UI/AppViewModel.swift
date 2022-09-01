@@ -7,7 +7,9 @@ class AppViewModel: ObservableObject {
 
     enum Action {
         case onAppear
+        case options
         case authenticate
+        case onboarding
         case goHome
     }
 
@@ -16,16 +18,50 @@ class AppViewModel: ObservableObject {
         case .onAppear:
             // Normally we'd determine if the user is already authenticated here.
             // For now, we'll just assume they need to authenticate at every launch.
-            send(.authenticate)
+            send(.options)
+
+        case .options:
+            set(state: .options(
+                AuthOptionsViewModel(
+                    responder: .init { action in
+                        switch action {
+                        case .signIn:
+                            self.send(.authenticate)
+
+                        case .signUp:
+                            self.send(.onboarding)
+                        }
+                    }
+                )
+            ))
+
 
         case .authenticate:
             set(state: .auth(
                 AuthViewModel(responder: .init { action in
                     switch action {
+                    case .back:
+                        self.send(.options)
+
                     case .success:
                         self.send(.goHome)
                     }
                 })
+            ))
+
+        case .onboarding:
+            set(state: .onboarding(
+                OnboardingViewModel(
+                    responder: .init { action in
+                        switch action {
+                        case .back:
+                            self.send(.options)
+
+                        case .success:
+                            self.send(.goHome)
+                        }
+                    }
+                )
             ))
 
         case .goHome:
@@ -33,7 +69,7 @@ class AppViewModel: ObservableObject {
                 HomeViewModel(responder: .init { action in
                     switch action {
                     case .logout:
-                        self.send(.authenticate)
+                        self.send(.options)
                     }
                 })
             ))
@@ -44,8 +80,10 @@ class AppViewModel: ObservableObject {
 
     enum State {
         case idle
+        case options(AuthOptionsViewModel)
         case auth(AuthViewModel)
         case home(HomeViewModel)
+        case onboarding(OnboardingViewModel)
     }
 
     @Published private(set) var state: State = .idle

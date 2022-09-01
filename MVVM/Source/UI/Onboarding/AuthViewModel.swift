@@ -16,6 +16,7 @@ class AuthViewModel: ObservableObject {
     // MARK: - Responder
 
     enum ResponderAction {
+        case back
         case success
     }
 
@@ -23,6 +24,7 @@ class AuthViewModel: ObservableObject {
 
     enum Action {
         case authenticate(String, String)
+        case back
     }
 
     func send(_ action: Action) {
@@ -42,6 +44,9 @@ class AuthViewModel: ObservableObject {
             // 2. handle errors
             // 3. tell parent
             responder.send(.success)
+
+        case .back:
+            responder.send(.back)
         }
     }
 
