@@ -11,7 +11,7 @@
 		D1347B6428BDB48F009635DF /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1347B6328BDB48F009635DF /* AppView.swift */; };
 		D1347B6628BDB48F009635DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1347B6528BDB48F009635DF /* Assets.xcassets */; };
 		D1347B6928BDB48F009635DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1347B6828BDB48F009635DF /* Preview Assets.xcassets */; };
-		D1347B7328BDB48F009635DF /* MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1347B7228BDB48F009635DF /* MVVMTests.swift */; };
+		D1347B7328BDB48F009635DF /* AuthViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1347B7228BDB48F009635DF /* AuthViewModelTests.swift */; };
 		D1347B7D28BDB48F009635DF /* MVVMUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1347B7C28BDB48F009635DF /* MVVMUITests.swift */; };
 		D1347B7F28BDB48F009635DF /* MVVMUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1347B7E28BDB48F009635DF /* MVVMUITestsLaunchTests.swift */; };
 		D1347B8F28BDB531009635DF /* AppViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1347B8E28BDB531009635DF /* AppViewModel.swift */; };
@@ -47,7 +47,7 @@
 		D1347B6528BDB48F009635DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1347B6828BDB48F009635DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D1347B6E28BDB48F009635DF /* MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		D1347B7228BDB48F009635DF /* MVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMTests.swift; sourceTree = "<group>"; };
+		D1347B7228BDB48F009635DF /* AuthViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModelTests.swift; sourceTree = "<group>"; };
 		D1347B7828BDB48F009635DF /* MVVMUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1347B7C28BDB48F009635DF /* MVVMUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMUITests.swift; sourceTree = "<group>"; };
 		D1347B7E28BDB48F009635DF /* MVVMUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 		D1347B7128BDB48F009635DF /* MVVMTests */ = {
 			isa = PBXGroup;
 			children = (
-				D1347B7228BDB48F009635DF /* MVVMTests.swift */,
+				D1347B7228BDB48F009635DF /* AuthViewModelTests.swift */,
 			);
 			path = MVVMTests;
 			sourceTree = "<group>";
@@ -334,7 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1347B7328BDB48F009635DF /* MVVMTests.swift in Sources */,
+				D1347B7328BDB48F009635DF /* AuthViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
