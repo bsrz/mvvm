@@ -1,4 +1,5 @@
 import Foundation
+import SwiftUI
 
 class HomeViewModel: ObservableObject {
 
@@ -19,14 +20,33 @@ class HomeViewModel: ObservableObject {
     // MARK: - Input
 
     enum Action {
-        case logout
+        case settings
     }
 
     func send(_ action: Action) {
         switch action {
-        case .logout:
-            // 1. tell parent
-            responder.send(.logout)
+        case .settings:
+            withAnimation {
+                self.state = .settings(
+                    SettingsViewModel(
+                        responder: .init { action in
+                            switch action {
+                            case .logout:
+                                self.responder.send(.logout)
+                            }
+                        }
+                    )
+                )
+            }
         }
     }
+
+    // MARK: - Output
+
+    enum State {
+        case idle
+        case settings(SettingsViewModel)
+    }
+
+    @Published private(set) var state: State = .idle
 }

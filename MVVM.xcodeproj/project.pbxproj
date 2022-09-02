@@ -28,6 +28,8 @@
 		D18696BD28C05BE300C600C1 /* AuthOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18696BC28C05BE300C600C1 /* AuthOptionsView.swift */; };
 		D18696BF28C05C1400C600C1 /* AuthOptionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18696BE28C05C1400C600C1 /* AuthOptionsViewModel.swift */; };
 		D18696C128C060FB00C600C1 /* OnboardingViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18696C028C060FB00C600C1 /* OnboardingViewModelTests.swift */; };
+		D1A5C5B828C26B9F0022B419 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5C5B628C26B9F0022B419 /* SettingsView.swift */; };
+		D1A5C5B928C26B9F0022B419 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5C5B728C26B9F0022B419 /* SettingsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		D18696BC28C05BE300C600C1 /* AuthOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthOptionsView.swift; sourceTree = "<group>"; };
 		D18696BE28C05C1400C600C1 /* AuthOptionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthOptionsViewModel.swift; sourceTree = "<group>"; };
 		D18696C028C060FB00C600C1 /* OnboardingViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewModelTests.swift; sourceTree = "<group>"; };
+		D1A5C5B628C26B9F0022B419 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		D1A5C5B728C26B9F0022B419 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +225,8 @@
 			children = (
 				D1347B9728BEA56C009635DF /* HomeView.swift */,
 				D1347B9928BEA5A1009635DF /* HomeViewModel.swift */,
+				D1A5C5B628C26B9F0022B419 /* SettingsView.swift */,
+				D1A5C5B728C26B9F0022B419 /* SettingsViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -363,7 +369,9 @@
 				D1347B6428BDB48F009635DF /* AppView.swift in Sources */,
 				D18696B528C055A000C600C1 /* OnboardingView.swift in Sources */,
 				D1347B9A28BEA5A1009635DF /* HomeViewModel.swift in Sources */,
+				D1A5C5B928C26B9F0022B419 /* SettingsViewModel.swift in Sources */,
 				D1347B9628BEA42F009635DF /* AuthView.swift in Sources */,
+				D1A5C5B828C26B9F0022B419 /* SettingsView.swift in Sources */,
 				D1347B9428BEA270009635DF /* String+Error.swift in Sources */,
 				D1347B6228BDB48F009635DF /* App.swift in Sources */,
 				D18696B928C0566A00C600C1 /* StringCaptureViewModel.swift in Sources */,
