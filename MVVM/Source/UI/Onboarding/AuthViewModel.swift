@@ -3,10 +3,6 @@ import SwiftUI
 
 class AuthViewModel: ObservableObject {
 
-    // MARK: - Properties
-
-    private let responder: Responder<ResponderAction>
-
     // MARK: - Lifecycle
 
     init(responder: Responder<ResponderAction>) {
@@ -19,6 +15,8 @@ class AuthViewModel: ObservableObject {
         case back
         case success
     }
+
+    private let responder: Responder<ResponderAction>
 
     // MARK: - Input
 

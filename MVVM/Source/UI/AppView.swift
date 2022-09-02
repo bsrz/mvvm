@@ -2,7 +2,7 @@ import SwiftUI
 
 struct AppView: View {
 
-    @StateObject var viewModel = AppViewModel()
+    @StateObject var viewModel: AppViewModel
 
     var body: some View {
         VStack {
@@ -30,7 +30,9 @@ struct AppView: View {
 }
 
 struct AppView_Previews: PreviewProvider {
+    static let viewModel = AppViewModel()
     static var previews: some View {
-        AppView()
+        AppView(viewModel: viewModel)
+            .onAppear { viewModel.send(.goHome) }
     }
 }
