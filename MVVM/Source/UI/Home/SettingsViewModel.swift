@@ -1,10 +1,12 @@
 import Foundation
 import SwiftUI
 
+@MainActor
 class SettingsViewModel: ObservableObject, Identifiable {
 
     // MARK: - Properties
 
+    nonisolated
     var id: String { .init(describing: Self.self) }
 
     // MARK: - Lifecycle

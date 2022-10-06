@@ -1,6 +1,7 @@
 @testable import MVVM
 import XCTest
 
+@MainActor
 class AuthViewModelTests: XCTestCase {
     func testViewModel_givenValidCredentials_respondsWithSuccess() {
         var expected = false

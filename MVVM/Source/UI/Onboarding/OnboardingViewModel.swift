@@ -1,6 +1,7 @@
 import Foundation
 import SwiftUI
 
+@MainActor
 class OnboardingViewModel: ObservableObject {
 
     // MARK: - Properties

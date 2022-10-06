@@ -1,6 +1,7 @@
 import Foundation
 import SwiftUI
 
+@MainActor
 class AppViewModel: ObservableObject {
 
     // MARK: - Input
